@@ -24,7 +24,9 @@ class Routes extends Component {
         const { routes } = this.state
         return (
             <Router>
-                <Redirect to={'/admin/home'} />
+                <Route path='/' exact render={() => (
+                    <Redirect to={'/admin/home'} />
+                )} />
                 <App>
                     <Route path='/login' component={Login} />
                     <Route path='/admin' render={() => (
