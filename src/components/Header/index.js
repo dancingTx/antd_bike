@@ -22,7 +22,7 @@ class Header extends Component {
     }
     getWeatherData = (city)=>{
         Request.JsonP({
-            url:`http://api.map.baidu.com/telematics/v3/weather?location=${city}&output=json&ak=D4eGHS2tznnYLwDhgEBmwfOBe6O9Fhad`
+            url:`https://api.map.baidu.com/telematics/v3/weather?location=${city}&output=json&ak=D4eGHS2tznnYLwDhgEBmwfOBe6O9Fhad`
         }).then((data,err)=>{
             const { dayPictureUrl, nightPictureUrl, temperature, weather, wind } = data[0].weather_data[0]
             this.setState({
