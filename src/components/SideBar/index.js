@@ -77,7 +77,7 @@ class SideBar extends Component {
         const { treeMenuNode } = this.state
         function showTitle() {
             if (!collapsed) {
-                return (<h1>管理系统</h1>)
+                return (<h2>单车管理系统</h2>)
             }
         }
         return (
