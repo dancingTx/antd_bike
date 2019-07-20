@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { Menu, Icon } from 'antd';
 import './index.less'
 import menuConfig from '../../config/menuConf'
+import Logo from '../../assets/logo-ant.svg'
 const { SubMenu } = Menu;
 
 class SideBar extends Component {
@@ -91,7 +92,7 @@ class SideBar extends Component {
                     className='menu'
                 >
                     <div className='logo'>
-                        <img src='/assets/logo-ant.svg' alt='' />
+                        <img src={Logo} alt='' />
                         {showTitle()}
                     </div>
                     {treeMenuNode}
