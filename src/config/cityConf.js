@@ -41,9 +41,14 @@ const cityList = [
         key: '3',
         children: [
             {
-                title: '凌源市',
-                value: 'lingyuan',
+                title: '沈阳市',
+                value: 'shenyang',
                 key: '3-1'
+            },
+            {
+                title: '铁岭市',
+                value: 'tieling',
+                key: '3-2'
             }
         ]
     }
