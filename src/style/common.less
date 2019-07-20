@@ -1,0 +1,17 @@
+@import 'default.less';
+::-webkit-scrollbar{display: none;}
+.container {
+    .sidebar {
+        height: calc(100vh);
+        background-color: @colorR;
+    }
+    .main {
+        overflow: auto;
+        height: calc(100vh);
+        background-color: @colorL;
+        .content {
+            position: relative;
+            padding: 20px;
+        }
+    }
+}
