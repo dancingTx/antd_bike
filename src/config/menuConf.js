@@ -1,7 +1,7 @@
 import Dashboard from '../pages/Dashboard'
 import Buttons from '../pages/Components/Buttons'
 import Modals from '../pages/Components/Modals'
-
+import Loading from '../pages/Components/Loading'
 const menuList = [
     {
         title: '首页',
@@ -29,6 +29,7 @@ const menuList = [
             {
                 title: 'Loading',
                 path: '/admin/components/loadings',
+                component: Loading,
                 icon:'loading'
             },
             {

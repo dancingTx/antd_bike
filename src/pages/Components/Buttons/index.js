@@ -29,6 +29,7 @@ class Buttons extends Component {
         })
     }
     render() {
+        const { loading,icon_loading,size } = this.state
         return (
             <div>
                 <Card title='基础按钮' className='card'>
@@ -49,8 +50,8 @@ class Buttons extends Component {
                 <Card title='Loading按钮' className='card'>
                     <Button loading type='primary'>确定</Button>
                     <Button shape='circle' loading type='primary' />
-                    <Button loading={this.state.loading} onClick={this.enterLoading} >点击加载</Button>
-                    <Button loading={this.state.icon_loading} onClick={this.enterIconLoading} icon='poweroff'>点击加载</Button>
+                    <Button loading={loading} onClick={this.enterLoading} >点击加载</Button>
+                    <Button loading={icon_loading} onClick={this.enterIconLoading} icon='poweroff'>点击加载</Button>
                     <Button shape='circle' loading />
                     <Button type='primary' onClick={this.loadingOff}>关闭</Button>
                 </Card>
@@ -61,16 +62,16 @@ class Buttons extends Component {
                     </Button.Group>
                 </Card>
                 <Card title='按钮尺寸' className='card'>
-                    <Radio.Group value={this.state.size} onChange={this.handleSizeChange}>
+                    <Radio.Group value={size} onChange={this.handleSizeChange}>
                         <Radio value='small'>小</Radio>
                         <Radio value='default'>中</Radio>
                         <Radio value='large'>大</Radio>
                     </Radio.Group>
-                    <Button type='primary' size={this.state.size}>按钮</Button>
-                    <Button size={this.state.size}>按钮</Button>
-                    <Button type='dashed' size={this.state.size}>按钮</Button>
-                    <Button type='danger' size={this.state.size}>按钮</Button>
-                    <Button size={this.state.size} disabled>按钮</Button>
+                    <Button type='primary' size={size}>按钮</Button>
+                    <Button size={size}>按钮</Button>
+                    <Button type='dashed' size={size}>按钮</Button>
+                    <Button type='danger' size={size}>按钮</Button>
+                    <Button size={size} disabled>按钮</Button>
                 </Card>
             </div>
         )
