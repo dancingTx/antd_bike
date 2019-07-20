@@ -1,7 +1,7 @@
 {
   "name": "manage",
   "version": "0.1.0",
-  "homepage": "https://ytx1150328467.github.io/antd_bike/",
+  "homepage": "https://dancingtx.github.io/antd_bike/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.4.3",
