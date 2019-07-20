@@ -1,7 +1,7 @@
 {
   "name": "manage",
   "version": "0.1.0",
-  "homepage": "https://github.com/ytx1150328467/Program/tree/master/manage",
+  "homepage": "https://ytx1150328467.github.io/antd_bike/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.4.3",
@@ -72,7 +72,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "predeploy": "npm run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
