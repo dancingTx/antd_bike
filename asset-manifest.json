@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ytx1150328467/antd_bike/static/css/main.62f738ed.chunk.css",
-    "main.js": "/ytx1150328467/antd_bike/static/js/main.26f32372.chunk.js",
-    "main.js.map": "/ytx1150328467/antd_bike/static/js/main.26f32372.chunk.js.map",
-    "runtime~main.js": "/ytx1150328467/antd_bike/static/js/runtime~main.e01f491f.js",
-    "runtime~main.js.map": "/ytx1150328467/antd_bike/static/js/runtime~main.e01f491f.js.map",
-    "static/css/2.b6ea04d8.chunk.css": "/ytx1150328467/antd_bike/static/css/2.b6ea04d8.chunk.css",
-    "static/js/2.b9756080.chunk.js": "/ytx1150328467/antd_bike/static/js/2.b9756080.chunk.js",
-    "static/js/2.b9756080.chunk.js.map": "/ytx1150328467/antd_bike/static/js/2.b9756080.chunk.js.map",
-    "index.html": "/ytx1150328467/antd_bike/index.html",
-    "precache-manifest.aba4f314aefdc35bcbd37d8173943ee2.js": "/ytx1150328467/antd_bike/precache-manifest.aba4f314aefdc35bcbd37d8173943ee2.js",
-    "service-worker.js": "/ytx1150328467/antd_bike/service-worker.js",
-    "static/css/2.b6ea04d8.chunk.css.map": "/ytx1150328467/antd_bike/static/css/2.b6ea04d8.chunk.css.map",
-    "static/css/main.62f738ed.chunk.css.map": "/ytx1150328467/antd_bike/static/css/main.62f738ed.chunk.css.map"
+    "main.css": "/antd_bike/static/css/main.62f738ed.chunk.css",
+    "main.js": "/antd_bike/static/js/main.d0fdcad0.chunk.js",
+    "main.js.map": "/antd_bike/static/js/main.d0fdcad0.chunk.js.map",
+    "runtime~main.js": "/antd_bike/static/js/runtime~main.ff925471.js",
+    "runtime~main.js.map": "/antd_bike/static/js/runtime~main.ff925471.js.map",
+    "static/css/2.b6ea04d8.chunk.css": "/antd_bike/static/css/2.b6ea04d8.chunk.css",
+    "static/js/2.8a1bf69b.chunk.js": "/antd_bike/static/js/2.8a1bf69b.chunk.js",
+    "static/js/2.8a1bf69b.chunk.js.map": "/antd_bike/static/js/2.8a1bf69b.chunk.js.map",
+    "index.html": "/antd_bike/index.html",
+    "precache-manifest.86ae0cf11c730a330cc791625ed84350.js": "/antd_bike/precache-manifest.86ae0cf11c730a330cc791625ed84350.js",
+    "service-worker.js": "/antd_bike/service-worker.js",
+    "static/css/2.b6ea04d8.chunk.css.map": "/antd_bike/static/css/2.b6ea04d8.chunk.css.map",
+    "static/css/main.62f738ed.chunk.css.map": "/antd_bike/static/css/main.62f738ed.chunk.css.map"
   }
 }
