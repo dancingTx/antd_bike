@@ -2,6 +2,7 @@ import Dashboard from '../pages/Dashboard'
 import Buttons from '../pages/Components/Buttons'
 import Modals from '../pages/Components/Modals'
 import Loading from '../pages/Components/Loading'
+import Notification from '../pages/Components/Notification'
 const menuList = [
     {
         title: '首页',
@@ -35,6 +36,7 @@ const menuList = [
             {
                 title: '通知提醒',
                 path: '/admin/components/notification',
+                component: Notification,
                 icon:'notification'
             },
             {
