@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/antd_bike/static/css/main.4e312b95.chunk.css",
-    "main.js": "/antd_bike/static/js/main.900f9c72.chunk.js",
-    "main.js.map": "/antd_bike/static/js/main.900f9c72.chunk.js.map",
+    "main.css": "/antd_bike/static/css/main.61947ac5.chunk.css",
+    "main.js": "/antd_bike/static/js/main.612f65dd.chunk.js",
+    "main.js.map": "/antd_bike/static/js/main.612f65dd.chunk.js.map",
     "runtime~main.js": "/antd_bike/static/js/runtime~main.ff925471.js",
     "runtime~main.js.map": "/antd_bike/static/js/runtime~main.ff925471.js.map",
-    "static/css/2.28d38898.chunk.css": "/antd_bike/static/css/2.28d38898.chunk.css",
-    "static/js/2.3b5d0c19.chunk.js": "/antd_bike/static/js/2.3b5d0c19.chunk.js",
-    "static/js/2.3b5d0c19.chunk.js.map": "/antd_bike/static/js/2.3b5d0c19.chunk.js.map",
+    "static/css/2.19dc26ba.chunk.css": "/antd_bike/static/css/2.19dc26ba.chunk.css",
+    "static/js/2.c0ce2a1c.chunk.js": "/antd_bike/static/js/2.c0ce2a1c.chunk.js",
+    "static/js/2.c0ce2a1c.chunk.js.map": "/antd_bike/static/js/2.c0ce2a1c.chunk.js.map",
     "index.html": "/antd_bike/index.html",
-    "precache-manifest.112b577e18baac571fa9a3355c8aa409.js": "/antd_bike/precache-manifest.112b577e18baac571fa9a3355c8aa409.js",
+    "precache-manifest.fa9131834b20e02d6171eeef446ac41a.js": "/antd_bike/precache-manifest.fa9131834b20e02d6171eeef446ac41a.js",
     "service-worker.js": "/antd_bike/service-worker.js",
-    "static/css/2.28d38898.chunk.css.map": "/antd_bike/static/css/2.28d38898.chunk.css.map",
-    "static/css/main.4e312b95.chunk.css.map": "/antd_bike/static/css/main.4e312b95.chunk.css.map",
+    "static/css/2.19dc26ba.chunk.css.map": "/antd_bike/static/css/2.19dc26ba.chunk.css.map",
+    "static/css/main.61947ac5.chunk.css.map": "/antd_bike/static/css/main.61947ac5.chunk.css.map",
     "static/media/logo-ant.svg": "/antd_bike/static/media/logo-ant.b29324c4.svg"
   }
 }
