@@ -27,7 +27,6 @@ class Gallery extends Component {
     }
     render() {
         const { visible, currentImg } = this.state
-        console.log(currentImg)
         const imgList = this.imgGen(5, 5).map(item => (
             item.map((item, i) => (
                 <Card
