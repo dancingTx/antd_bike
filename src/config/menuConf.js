@@ -1,8 +1,10 @@
 import Dashboard from '../pages/Dashboard'
 import Buttons from '../pages/Components/Buttons'
 import Modals from '../pages/Components/Modals'
-import Loading from '../pages/Components/Loading'
-import Notification from '../pages/Components/Notification'
+import Loadings from '../pages/Components/Loadings'
+import Notifications from '../pages/Components/Notifications'
+import Messages from '../pages/Components/Messages'
+import Tabs from '../pages/Components/Tabs'
 const menuList = [
     {
         title: '首页',
@@ -30,22 +32,24 @@ const menuList = [
             {
                 title: 'Loading',
                 path: '/admin/components/loadings',
-                component: Loading,
+                component: Loadings,
                 icon:'loading'
             },
             {
                 title: '通知提醒',
                 path: '/admin/components/notification',
-                component: Notification,
+                component: Notifications,
                 icon:'notification'
             },
             {
                 title: '全局Message',
                 path: '/admin/components/messages',
+                component: Messages
             },
             {
                 title: 'Tab页签',
                 path: '/admin/components/tabs',
+                component: Tabs
             },
             {
                 title: '图片画廊',
