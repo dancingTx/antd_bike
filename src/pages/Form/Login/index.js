@@ -26,7 +26,7 @@ class LoginForm extends Component {
                         </Item>
                         <Item>
                             <Input
-                                prefix={<Icon type="password" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                                prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                                 placeholder="Password"
                                 style={{ width: 200 }}
                             />
