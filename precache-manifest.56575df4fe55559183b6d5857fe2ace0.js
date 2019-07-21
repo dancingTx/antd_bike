@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e92656e6e57cc05e5fd872e20a34cad",
+    "revision": "4cd5cbbf1d3aaa80d3e557927555ed9e",
     "url": "/antd_bike/index.html"
   },
   {
-    "revision": "73a1444f91596ef71332",
-    "url": "/antd_bike/static/css/2.de4dd066.chunk.css"
+    "revision": "6488ee44a1b546f08b01",
+    "url": "/antd_bike/static/css/2.ff58e599.chunk.css"
   },
   {
-    "revision": "fae25f63281c184eaf46",
-    "url": "/antd_bike/static/css/main.17669ea6.chunk.css"
+    "revision": "b2b4d3a66c32a7e1ffa7",
+    "url": "/antd_bike/static/css/main.6b5bf59f.chunk.css"
   },
   {
-    "revision": "73a1444f91596ef71332",
-    "url": "/antd_bike/static/js/2.b61b7853.chunk.js"
+    "revision": "6488ee44a1b546f08b01",
+    "url": "/antd_bike/static/js/2.9f287522.chunk.js"
   },
   {
-    "revision": "fae25f63281c184eaf46",
-    "url": "/antd_bike/static/js/main.ab59eab2.chunk.js"
+    "revision": "b2b4d3a66c32a7e1ffa7",
+    "url": "/antd_bike/static/js/main.cae1e43a.chunk.js"
   },
   {
     "revision": "5f139f202ba7f8a0230e",
