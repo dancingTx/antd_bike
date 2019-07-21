@@ -7,11 +7,13 @@ import Messages from '../pages/Components/Messages'
 import Tabs from '../pages/Components/Tabs'
 import Gallery from '../pages/Components/Gallery'
 import Carousels from '../pages/Components/Carousels'
+import LoginForm from '../pages/Form/Login'
+import RegisterForm from '../pages/Form/Register'
 const menuList = [
     {
         title: '首页',
         path: '/admin/home',
-        icon:'dashboard',
+        icon: 'dashboard',
         component: Dashboard
     },
     {
@@ -23,25 +25,25 @@ const menuList = [
                 title: '按钮',
                 path: '/admin/components/buttons',
                 component: Buttons,
-                icon:''
+                icon: ''
             },
             {
                 title: '弹框',
                 path: '/admin/components/modals',
                 component: Modals,
-                icon:'windows'
+                icon: 'windows'
             },
             {
                 title: 'Loading',
                 path: '/admin/components/loadings',
                 component: Loadings,
-                icon:'loading'
+                icon: 'loading'
             },
             {
                 title: '通知提醒',
                 path: '/admin/components/notification',
                 component: Notifications,
-                icon:'notification'
+                icon: 'notification'
             },
             {
                 title: '全局Message',
@@ -68,24 +70,26 @@ const menuList = [
     {
         title: '表单',
         path: '/admin/form',
-        icon:'form',
+        icon: 'form',
         children: [
             {
                 title: '登录',
                 path: '/admin/form/login',
-                icon:'login'
+                icon: 'login',
+                component: LoginForm
             },
             {
                 title: '注册',
                 path: '/admin/form/reg',
-                icon:'logout'
+                icon: 'logout',
+                component: RegisterForm
             }
         ]
     },
     {
         title: '表格',
         path: '/admin/table',
-        icon:'table',
+        icon: 'table',
         children: [
             {
                 title: '基础表格',
@@ -136,24 +140,24 @@ const menuList = [
             {
                 title: '柱形图',
                 path: '/admin/charts/bar',
-                icon:'bar-chart'
+                icon: 'bar-chart'
             },
             {
                 title: '饼图',
                 path: '/admin/charts/pie',
-                icon:'pie-chart'
+                icon: 'pie-chart'
             },
             {
                 title: '折线图',
                 path: '/admin/charts/line',
-                icon:'line-chart'
+                icon: 'line-chart'
             },
         ]
     },
     {
         title: '权限设置',
         path: '/admin/permission',
-        icon:'setting'
+        icon: 'setting'
     },
 ];
 export default menuList;
