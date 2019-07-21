@@ -5,6 +5,7 @@ import Loadings from '../pages/Components/Loadings'
 import Notifications from '../pages/Components/Notifications'
 import Messages from '../pages/Components/Messages'
 import Tabs from '../pages/Components/Tabs'
+import Gallery from '../pages/Components/Gallery'
 const menuList = [
     {
         title: '首页',
@@ -54,6 +55,7 @@ const menuList = [
             {
                 title: '图片画廊',
                 path: '/admin/components/gallery',
+                component: Gallery
             },
             {
                 title: '轮播图',
