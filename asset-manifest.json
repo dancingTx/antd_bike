@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/antd_bike/static/css/main.4fcb712e.chunk.css",
-    "main.js": "/antd_bike/static/js/main.cd54f57f.chunk.js",
-    "main.js.map": "/antd_bike/static/js/main.cd54f57f.chunk.js.map",
+    "main.css": "/antd_bike/static/css/main.17669ea6.chunk.css",
+    "main.js": "/antd_bike/static/js/main.ab59eab2.chunk.js",
+    "main.js.map": "/antd_bike/static/js/main.ab59eab2.chunk.js.map",
     "runtime~main.js": "/antd_bike/static/js/runtime~main.ff925471.js",
     "runtime~main.js.map": "/antd_bike/static/js/runtime~main.ff925471.js.map",
-    "static/css/2.59119d7d.chunk.css": "/antd_bike/static/css/2.59119d7d.chunk.css",
-    "static/js/2.481f62c5.chunk.js": "/antd_bike/static/js/2.481f62c5.chunk.js",
-    "static/js/2.481f62c5.chunk.js.map": "/antd_bike/static/js/2.481f62c5.chunk.js.map",
+    "static/css/2.de4dd066.chunk.css": "/antd_bike/static/css/2.de4dd066.chunk.css",
+    "static/js/2.b61b7853.chunk.js": "/antd_bike/static/js/2.b61b7853.chunk.js",
+    "static/js/2.b61b7853.chunk.js.map": "/antd_bike/static/js/2.b61b7853.chunk.js.map",
     "index.html": "/antd_bike/index.html",
-    "precache-manifest.a7d0dc224899337528776f2e4801ab93.js": "/antd_bike/precache-manifest.a7d0dc224899337528776f2e4801ab93.js",
+    "precache-manifest.df6e29e99656ff2cf1a69d350e7fed70.js": "/antd_bike/precache-manifest.df6e29e99656ff2cf1a69d350e7fed70.js",
     "service-worker.js": "/antd_bike/service-worker.js",
-    "static/css/2.59119d7d.chunk.css.map": "/antd_bike/static/css/2.59119d7d.chunk.css.map",
-    "static/css/main.4fcb712e.chunk.css.map": "/antd_bike/static/css/main.4fcb712e.chunk.css.map",
+    "static/css/2.de4dd066.chunk.css.map": "/antd_bike/static/css/2.de4dd066.chunk.css.map",
+    "static/css/main.17669ea6.chunk.css.map": "/antd_bike/static/css/main.17669ea6.chunk.css.map",
     "static/media/1.png": "/antd_bike/static/media/1.45425960.png",
     "static/media/10.png": "/antd_bike/static/media/10.b3ffa150.png",
     "static/media/11.png": "/antd_bike/static/media/11.c8868604.png",
@@ -38,6 +38,9 @@
     "static/media/7.png": "/antd_bike/static/media/7.dc5b3d5d.png",
     "static/media/8.png": "/antd_bike/static/media/8.87f15312.png",
     "static/media/9.png": "/antd_bike/static/media/9.e3b2b25a.png",
+    "static/media/carousel-1.jpg": "/antd_bike/static/media/carousel-1.5e0e6213.jpg",
+    "static/media/carousel-2.jpg": "/antd_bike/static/media/carousel-2.5f674faa.jpg",
+    "static/media/carousel-3.jpg": "/antd_bike/static/media/carousel-3.c15508fe.jpg",
     "static/media/logo-ant.svg": "/antd_bike/static/media/logo-ant.b29324c4.svg"
   }
 }
