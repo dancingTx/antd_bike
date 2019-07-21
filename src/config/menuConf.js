@@ -6,6 +6,7 @@ import Notifications from '../pages/Components/Notifications'
 import Messages from '../pages/Components/Messages'
 import Tabs from '../pages/Components/Tabs'
 import Gallery from '../pages/Components/Gallery'
+import Carousels from '../pages/Components/Carousels'
 const menuList = [
     {
         title: '首页',
@@ -60,6 +61,7 @@ const menuList = [
             {
                 title: '轮播图',
                 path: '/admin/components/carousel',
+                component: Carousels
             }
         ]
     },
