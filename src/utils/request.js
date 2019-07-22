@@ -1,4 +1,5 @@
 import jsonp from 'jsonp'
+
 class Request {
     static JsonP(options) {
         return new Promise((resolve, reject) => {
@@ -13,6 +14,7 @@ class Request {
             })
         })
     }
+    
 }
 
 export default Request
