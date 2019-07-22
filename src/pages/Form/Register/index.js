@@ -7,8 +7,37 @@ const { Group } = Radio
 const { Password, TextArea } = Input
 const { Option } = Select
 class RegisterForm extends Component {
-    state={
+    state = {
         loading: false
+    }
+    getBase64 = (img, callback) => {
+        const reader = new FileReader();
+        reader.addEventListener('load', () => callback(reader.result));
+        reader.readAsDataURL(img);
+    }
+    handleChange = (info) => {
+        if (info.file.status === 'uploading') {
+            this.setState({ loading: true });
+            return;
+        }
+        if (info.file.status === 'done') {
+            // Get this url from response in real world.
+            this.getBase64(info.file.originFileObj, imageUrl =>
+                this.setState({
+                    imageUrl,
+                    loading: false,
+                }),
+            );
+        }
+    }
+    handleSubmit = (e) => {
+        e.preventDefault()
+        const { validateFields } = this.props.form
+        validateFields((err, values) => {
+            if (!err) {
+                console.log(values)
+            }
+        });
     }
     render() {
         const { getFieldDecorator } = this.props.form
@@ -23,6 +52,12 @@ class RegisterForm extends Component {
                 sm: { span: 8 },
             },
         };
+        const ItemLayout = {
+            wrapperCol: {
+                xs: { span: 24 },
+                sm: { offset: 8 }
+            }
+        }
         const singleOption = [
             { name: '有为青年', code: 'ywqn' },
             { name: '咸鱼一条', code: 'xyyt' },
@@ -47,14 +82,11 @@ class RegisterForm extends Component {
         return (
             <div>
                 <Card title='注册表单'>
-                    <Form {...formItemLayout}>
+                    <Form {...formItemLayout} onSubmit={this.handleSubmit}>
                         <Item label="用户名">
                             {getFieldDecorator('username', {
+                                initialValue:'admin',
                                 rules: [
-                                    {
-                                        type: 'text',
-                                        message: 'The input is not valid Username!',
-                                    },
                                     {
                                         required: true,
                                         message: 'Please input your username!',
@@ -64,7 +96,7 @@ class RegisterForm extends Component {
                         </Item>
                         <Item label="密码">
                             {getFieldDecorator('password', {
-                                initialValue: '123',
+                                initialValue: '123456',
                                 rules: [
                                     {
                                         required: true,
@@ -114,7 +146,7 @@ class RegisterForm extends Component {
                                 ],
                             })(<Select>
                                 {
-                                    singleOption.map(({code,name}) => (
+                                    singleOption.map(({ code, name }) => (
                                         <Option value={code} key={code}>{name}</Option>
                                     ))
                                 }
@@ -134,7 +166,7 @@ class RegisterForm extends Component {
                                 placeholder="Please select hobby"
                             >
                                 {
-                                    manyOptions.map(({code,name}) => (
+                                    manyOptions.map(({ code, name }) => (
                                         <Option value={code} key={code}>{name}</Option>
                                     ))
                                 }
@@ -157,26 +189,28 @@ class RegisterForm extends Component {
                         </Item>
                         <Item label="出生日期">
                             {getFieldDecorator('birth', {
+                                initialValue: moment(Date.now()),
                                 rules: [
                                     {
                                         required: true,
                                         message: 'Please input your birth!',
                                     }
                                 ],
-                            })(<DatePicker />)}
-                        </Item>        
+                            })(<DatePicker showTime format='YYYY/MM/DD HH:mm:ss' />)}
+                        </Item>
                         <Item label="联系地址">
                             {getFieldDecorator('address', {
+                                initialValue: '北京市海淀区',
                                 rules: [],
-                            })(<TextArea 
+                            })(<TextArea
                                 placeholder="Please input your address"
                                 autosize={{ minRows: 2, maxRows: 6 }} />)}
                         </Item>
-                        <Item label="早期时间">
+                        <Item label="早起时间">
                             {getFieldDecorator('moning', {
-                                initialValue: moment('00:00:00', 'HH:mm:ss'),
+                                initialValue: moment(Date.now()),
                                 rules: [],
-                            })(<TimePicker/>)}
+                            })(<TimePicker format='HH:mm:ss' />)}
                         </Item>
                         <Item label="用户头像">
                             {getFieldDecorator('avatar', {
@@ -185,19 +219,20 @@ class RegisterForm extends Component {
                                 listType="picture-card"
                                 className="avatar-uploader"
                                 showUploadList={false}
-                                action="#"
+                                action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                                onChange={this.handleChange}
                             >
-                                {uploadButton}
+                                {this.state.imageUrl ? <img alt='' style={{ width: 400 }} src={this.state.imageUrl} /> : uploadButton}
                             </Upload>)}
                         </Item>
-                        <Item style={{ marginLeft: 400 }}>
-                                {getFieldDecorator('plan', {
-                                    initialValue: true,
-                                    valuePropName: 'checked',
-                                    rules: [],
-                                })(<Checkbox>我已阅读过<a href='http://www.cn.bing.com'>用户协议</a></Checkbox>)}
-                            </Item>
-                        <Item style={{ marginLeft: 440 }}>
+                        <Item {...ItemLayout}>
+                            {getFieldDecorator('plan', {
+                                initialValue: true,
+                                valuePropName: 'checked',
+                                rules: [],
+                            })(<Checkbox>我已阅读过<a href='http://www.cn.bing.com'>用户协议</a></Checkbox>)}
+                        </Item>
+                        <Item {...ItemLayout}>
                             <Button type="primary" htmlType="submit">注册</Button>
                         </Item>
                     </Form>
