@@ -15,6 +15,7 @@ class Gallery extends Component {
                 newArr.push(j)
                 count = row * (i - 1)
             }
+            // eslint-disable-next-line no-loop-func
             imgList.push(newArr.map(item => `${item + count}.png`))
         }
         return imgList
@@ -61,7 +62,7 @@ class Gallery extends Component {
                         alt=''
                         src={currentImg && require(`../../../assets/gallery/${currentImg}`)}
                         style={{ width: '100%' }}
-                        />
+                    />
                 </Modal>
             </div>
         )

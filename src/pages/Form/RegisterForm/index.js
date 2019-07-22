@@ -35,6 +35,7 @@ class RegisterForm extends Component {
         const { validateFields } = this.props.form
         validateFields((err, values) => {
             if (!err) {
+                values.birth = values.birth._i
                 console.log(values)
             }
         });
@@ -85,7 +86,7 @@ class RegisterForm extends Component {
                     <Form {...formItemLayout} onSubmit={this.handleSubmit}>
                         <Item label="用户名">
                             {getFieldDecorator('username', {
-                                initialValue:'admin',
+                                initialValue: 'admin',
                                 rules: [
                                     {
                                         required: true,

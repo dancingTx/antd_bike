@@ -7,8 +7,9 @@ import Messages from '../pages/Components/Messages'
 import Tabs from '../pages/Components/Tabs'
 import Gallery from '../pages/Components/Gallery'
 import Carousels from '../pages/Components/Carousels'
-import LoginForm from '../pages/Form/Login'
-import RegisterForm from '../pages/Form/Register'
+import LoginForm from '../pages/Form/LoginForm'
+import RegisterForm from '../pages/Form/RegisterForm'
+import BasicTable from '../pages/Table/BasicTable'
 const menuList = [
     {
         title: '首页',
@@ -95,6 +96,7 @@ const menuList = [
                 title: '基础表格',
                 path: '/admin/table/basic',
                 icon: 'table',
+                component: BasicTable
             },
             {
                 title: '高级表格',
