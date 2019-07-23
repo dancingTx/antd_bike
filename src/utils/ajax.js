@@ -12,11 +12,10 @@ AxiosInstance.interceptors.request.use(function (config) {
     // Do something with request error
     return Promise.reject(error);
 });
-
 // Add a response interceptor
 AxiosInstance.interceptors.response.use(function (response) {
     // Do something with response data
-    const { code,msg } = response.data
+    const { code, msg } = response.data
     switch (code) {
         case 401:
             message.warning(msg);
