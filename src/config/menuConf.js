@@ -10,6 +10,7 @@ import Carousels from '../pages/Components/Carousels'
 import LoginForm from '../pages/Form/LoginForm'
 import RegisterForm from '../pages/Form/RegisterForm'
 import BasicTable from '../pages/Table/BasicTable'
+import SeniorTable from '../pages/Table/SeniorTable'
 const menuList = [
     {
         title: '首页',
@@ -100,8 +101,9 @@ const menuList = [
             },
             {
                 title: '高级表格',
-                path: '/admin/table/high',
+                path: '/admin/table/senior',
                 icon: 'table',
+                component: SeniorTable
             }
         ]
     },
