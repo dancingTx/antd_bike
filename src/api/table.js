@@ -1,3 +1,7 @@
 import AxiosInstance from '../utils/ajax'
 
-export const tableList = () => AxiosInstance.get('/table/list')
+export const tableList = (page) => AxiosInstance.get('/table/list',{
+    params: {
+        page
+    }
+})

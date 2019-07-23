@@ -2,9 +2,14 @@ import React, { Component } from 'react'
 import { Card, Table, Button, Modal, message } from 'antd';
 import './index.less'
 import { tableList } from '../../../api/table'
+import Utils from '../../../utils/utils'
+const { pagination } = Utils
 const { confirm } = Modal
 const { success } = message
 class BasicTable extends Component {
+    params = {
+        page: 1
+    }
     componentWillMount() {
         const dataSource = [
             {
@@ -29,11 +34,16 @@ class BasicTable extends Component {
         this.requestData()
     }
     requestData = async () => {
-        const { data, status } = await tableList()
+        const { data, status } = await tableList(this.params.page)
         const { code, result } = data
+        const { list } = result
         if (status === 200 && code === 0) {
-            result.map((item, index) => item.key = index)
-            this.setState({ result })
+            list.map((item, index) => item.key = index)
+            this.setState({
+                list, pagination: pagination(result, (current) => {
+                    this.params.page = current
+                    this.requestData()
+            }) })
         }
     }
     handleRowClick = (selectRowItem, index) => {
@@ -51,7 +61,7 @@ class BasicTable extends Component {
 
     }
     render() {
-        const { dataSource, result, selectedRowKeys, selectedCheckRowKeys } = this.state
+        const { dataSource, list, selectedRowKeys, selectedCheckRowKeys, pagination } = this.state
         const columns = [
             {
                 title: '姓名',
@@ -109,11 +119,11 @@ class BasicTable extends Component {
                     <Table dataSource={dataSource} columns={columns} bordered />
                 </Card>
                 <Card title='动态渲染表格-Mock' className='card'>
-                    <Table dataSource={result} columns={columns} bordered />
+                    <Table dataSource={list} columns={columns} bordered />
                 </Card>
                 <Card title='单选按钮表格' className='card'>
                     <Table
-                        dataSource={result}
+                        dataSource={list}
                         columns={columns}
                         bordered
                         rowSelection={rowSelection}
@@ -127,10 +137,18 @@ class BasicTable extends Component {
                 <Card title='复选按钮表格' className='card'>
                     <Button type='primary' onClick={this.handleRowsDel}>删除</Button>
                     <Table
-                        dataSource={result}
+                        dataSource={list}
                         columns={columns}
                         bordered
                         rowSelection={rowCheckSelection}
+                    />
+                </Card>
+                <Card title='基础表格分页' className='card'>
+                    <Table
+                        dataSource={list}
+                        columns={columns}
+                        bordered
+                        pagination={pagination}
                     />
                 </Card>
             </div>

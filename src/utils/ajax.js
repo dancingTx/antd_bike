@@ -2,7 +2,7 @@ import axios from 'axios'
 import { message } from 'antd'
 const AxiosInstance = axios.create({
     baseURL: 'https://www.easy-mock.com/mock/5d35b7423b58df20401cf219/mockapi',
-    timeout: 1000,
+    timeout: 5000,
 })
 
 AxiosInstance.interceptors.request.use(function (config) {
