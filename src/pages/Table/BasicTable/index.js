@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import { Card, Table } from 'antd';
+import { Card, Table, Button, Modal, message } from 'antd';
 import './index.less'
 import { tableList } from '../../../api/table'
+const { confirm } = Modal
+const { success } = message
 class BasicTable extends Component {
     componentWillMount() {
         const dataSource = [
@@ -38,8 +40,18 @@ class BasicTable extends Component {
         const selectedRowKeys = [index]
         this.setState({ selectRowItem, selectedRowKeys })
     }
+    handleRowsDel = () => {
+        let { selectRowList } = this.state
+        const ids = selectRowList && selectRowList.map(item => item.id)
+        ids && confirm({
+            content: `是否删除以下数据:${ids}`,
+            onOk: () => success('删除成功!'),
+            onCancel() { },
+        });
+
+    }
     render() {
-        const { dataSource, result, selectedRowKeys } = this.state
+        const { dataSource, result, selectedRowKeys, selectedCheckRowKeys } = this.state
         const columns = [
             {
                 title: '姓名',
@@ -84,6 +96,13 @@ class BasicTable extends Component {
             type: 'radio',
             selectedRowKeys
         }
+        const rowCheckSelection = {
+            type: 'checkbox',
+            selectedRowKeys: selectedCheckRowKeys,
+            onChange: (selectedCheckRowKeys, selectRowList) => {
+                this.setState({ selectedCheckRowKeys, selectRowList })
+            }
+        }
         return (
             <div>
                 <Card title='基础表格' className='card'>
@@ -98,11 +117,20 @@ class BasicTable extends Component {
                         columns={columns}
                         bordered
                         rowSelection={rowSelection}
-                        onRow={(record,index) => {
+                        onRow={(record, index) => {
                             return {
-                                onClick: event =>  this.handleRowClick(record, index) , // 点击行
+                                onClick: event => this.handleRowClick(record, index), // 点击行
                             };
                         }}
+                    />
+                </Card>
+                <Card title='复选按钮表格' className='card'>
+                    <Button type='primary' onClick={this.handleRowsDel}>删除</Button>
+                    <Table
+                        dataSource={result}
+                        columns={columns}
+                        bordered
+                        rowSelection={rowCheckSelection}
                     />
                 </Card>
             </div>
