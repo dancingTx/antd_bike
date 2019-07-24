@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/antd_bike/precache-manifest.559bb5187d4c2ad20f9eae5957c40cb8.js"
+  "/antd_bike/precache-manifest.a5fcd741cc4a22c1a8a766c6d4c989e8.js"
 );
 
 self.addEventListener('message', (event) => {
