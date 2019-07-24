@@ -1,6 +1,6 @@
 
 const Utils = {
-    date2Dou(num){
+    date2Dou(num) {
         return num < 10 ? `0${num}` : num
     },
     formatDate(time) {
@@ -14,19 +14,19 @@ const Utils = {
         const seconds = this.date2Dou(date.getSeconds())
         return `${years}/${months}/${days} ${hours}:${minutes}:${seconds}`
     },
-    pagination(result,callback) {
-        const { current, pageSize, total } = result
-        const page = {
+    pagination(result, callback) {
+        const { page, page_size, total_count } = result
+        const pages = {
             onChange: (current) => {
                 callback(current)
             },
-            current,
-            pageSize,
-            total,
-            showTotal: () => `共${total}条`,
+            page,
+            pageSize: page_size,
+            total: total_count,
+            showTotal: () => `共${total_count}条`,
             // showQuickJumper: true
         }
-        return page
+        return pages
     }
 }
 

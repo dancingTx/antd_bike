@@ -15,7 +15,8 @@ AxiosInstance.interceptors.request.use(function (config) {
 // Add a response interceptor
 AxiosInstance.interceptors.response.use(function (response) {
     // Do something with response data
-    const { code, msg } = response.data
+    const { data, status } = response
+    const { code, msg } = data
     switch (code) {
         case 401:
             message.warning(msg);
@@ -23,7 +24,9 @@ AxiosInstance.interceptors.response.use(function (response) {
         default:
             break;   
     }
-    return response;
+    if(status === 200) {
+        return data
+    }
     
 }, function (error) {
     // Do something with response error

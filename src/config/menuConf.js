@@ -11,6 +11,7 @@ import LoginForm from '../pages/Form/LoginForm'
 import RegisterForm from '../pages/Form/RegisterForm'
 import BasicTable from '../pages/Table/BasicTable'
 import SeniorTable from '../pages/Table/SeniorTable'
+import City from '../pages/City'
 const menuList = [
     {
         title: '首页',
@@ -113,7 +114,8 @@ const menuList = [
     },
     {
         title: '城市管理',
-        path: '/admin/city'
+        path: '/admin/city',
+        component: City
     },
     {
         title: '订单管理',
