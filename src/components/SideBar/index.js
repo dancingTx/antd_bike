@@ -21,31 +21,27 @@ class SideBar extends Component {
                 rootSubmenuKeys.push(item.path)
             }
         });
-        this.setState({
-            rootSubmenuKeys
-        })
+        this.setState({ rootSubmenuKeys })
     }
     renderMenu = (datas) => {
         return datas.map(item => {
+            item.hidden = item.hidden ? item.hidden : false
             if (item.children) {
                 return (
                     <SubMenu
                         key={item.path}
                         title={
                             <span>
-
                                 <Icon type={item.icon ? item.icon : 'appstore'} />
                                 <span>{item.title}</span>
-
                             </span>
                         }
                     >
                         {this.renderMenu(item.children)}
                     </SubMenu>
-
                 )
             }
-            return (
+            return item.hidden ? '' : (
                 <Menu.Item key={item.path}>
                     <NavLink to={item.path}>
                         <Icon type={item.icon ? item.icon : 'appstore'} />

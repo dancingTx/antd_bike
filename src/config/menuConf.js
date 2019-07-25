@@ -122,16 +122,11 @@ const menuList = [
         title: '订单管理',
         path: '/admin/order',
         component: Order,
-        btnList: [
-            {
-                title: '订单详情',
-                path: 'detail'
-            },
-            {
-                title: '结束订单',
-                path: 'finish'
-            }
-        ]
+    },
+    {
+      title:'订单详情',
+      path:'/detail/order/:order_id',
+      hidden:true
     },
     {
         title: '员工管理',

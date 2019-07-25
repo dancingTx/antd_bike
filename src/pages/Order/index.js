@@ -50,10 +50,11 @@ class Order extends Component {
         this.setState({ isShowFinishOrder: true })
     }
     handleOrderDetail = () => {
-        this.setState({ isShowOrder: true })
+        const { id } = this.state.selectRowItem
+        window.open(`#/detail/order/${id}`,'_blank')
     }
     handleCancel = () => {
-        this.setState({ isShowOrder: false, isShowFinishOrder: false })
+        this.setState({ isShowFinishOrder: false })
     }
     handleSubmit = async () => {
         const {result} = await orderFinish()
@@ -98,20 +99,20 @@ class Order extends Component {
                 sm: { span: 14 },
             },
         };
-        const { list, pagination, isShowOrder, isShowFinishOrder, selectedRowKeys, selectRowItem } = this.state
+        const { list, pagination, isShowFinishOrder, selectedRowKeys, selectRowItem } = this.state
         const rowSelection = {
             type: 'radio',
             selectedRowKeys
         }
-        const { car_sn, start_time } = selectRowItem
+        const { car_sn, start_time,id } = selectRowItem
         return (
             <div>
                 <Card className='card'>
                     <FilterForm />
                 </Card>
                 <Card className='card'>
-                    <Button type='primary' onClick={this.handleOrderDetail}>订单详情</Button>
-                    <Button type='primary' onClick={this.handleFinishOrder} disabled={selectRowItem.car_sn ? false : true}>结束订单</Button>
+                    <Button type='primary' onClick={this.handleOrderDetail} disabled={id ? false : true}>订单详情</Button>
+                    <Button type='primary' onClick={this.handleFinishOrder} disabled={car_sn ? false : true}>结束订单</Button>
                     <Table
                         columns={colums}
                         dataSource={list}
@@ -124,15 +125,6 @@ class Order extends Component {
                             };
                         }} />
                 </Card>
-                <Modal
-                    title='订单详情'
-                    visible={isShowOrder}
-                    onOk={this.handleSubmit}
-                    onCancel={this.handleCancel}
-                    cancelText='取消'
-                    okText='确定'
-                >
-                </Modal>
                 <Modal
                     title='结束订单'
                     visible={isShowFinishOrder}

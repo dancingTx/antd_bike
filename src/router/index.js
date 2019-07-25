@@ -4,6 +4,7 @@ import menuConf from '../config/menuConf'
 import App from '../App'
 import Login from '../pages/Login'
 import LayOut from '../LayOut'
+import Detail from '../Detail'
 import Page404 from '../pages/error/Page404'
 class Routes extends Component {
     LoopRoute = (datas) => {
@@ -37,6 +38,14 @@ class Routes extends Component {
                             </Switch>
                         </LayOut>
                     )} />
+                    <Route path='/detail' render={()=>(
+                        <Detail>
+                            <Switch>
+                                {routes}
+                                <Route component={Page404} />
+                            </Switch>
+                        </Detail>
+                    )}/>
                 </App>
             </Router>
         )
