@@ -12,10 +12,9 @@ class SeniorTable extends Component {
         this.requestData()
     }
     requestData = async () => {
-        const { data, status } = await tableList()
-        const { code, result } = data
+        const { code, result } = await tableList()
         const { list } = result
-        if (status === 200 && code === 0) {
+        if (code === 0) {
             list.map((item, index) => item.key = index)
             this.setState({ list })
         }

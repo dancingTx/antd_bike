@@ -28,6 +28,7 @@ class City extends Component {
             item.city_admins = item.city_admins.map(item => item.user_name).join('、')
             item.car_mode = item.car_mode === 1 ? '指定停车点模式' : '禁停区模式'
             item.opt_mode = item.opt_mode === 1 ? '自营' : '加盟'
+            item.update_date = Utils.formatDate(item.update_date)
             return item
         })
         this.setState({

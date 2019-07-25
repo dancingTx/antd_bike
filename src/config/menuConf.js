@@ -12,6 +12,7 @@ import RegisterForm from '../pages/Form/RegisterForm'
 import BasicTable from '../pages/Table/BasicTable'
 import SeniorTable from '../pages/Table/SeniorTable'
 import City from '../pages/City'
+import Order from '../pages/Order'
 const menuList = [
     {
         title: '首页',
@@ -120,6 +121,7 @@ const menuList = [
     {
         title: '订单管理',
         path: '/admin/order',
+        component: Order,
         btnList: [
             {
                 title: '订单详情',
