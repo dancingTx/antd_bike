@@ -1,6 +1,17 @@
 @import 'default.less';
 @import 'loading.less';
 ::-webkit-scrollbar{display: none;}
+ul,li {
+    list-style: none;
+}
+.clearfix {
+    &::after {
+        content:' ';
+        clear: both;
+        display: block;
+        visibility: hidden;
+    }
+}
 .container {
     .sidebar {
         height: calc(100vh);
@@ -16,6 +27,7 @@
         }
     }
 }
+
 .card {
     margin-bottom: 20px;
     button {

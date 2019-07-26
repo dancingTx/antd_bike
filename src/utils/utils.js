@@ -14,6 +14,9 @@ const Utils = {
         const seconds = this.date2Dou(date.getSeconds())
         return `${years}/${months}/${days} ${hours}:${minutes}:${seconds}`
     },
+    m2Km(distance) {
+        return `${distance / 1000}km`
+    },
     pagination(result, callback) {
         const { page, page_size, total_count } = result
         const pages = {

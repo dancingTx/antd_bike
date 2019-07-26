@@ -1,20 +1,22 @@
 import React, { Component } from 'react'
-import { Row } from 'antd';
+import { Row, Col } from 'antd';
 import Header from './components/Header'
 import './style/common.less'
-class LayOut extends Component {
+class Detail extends Component {
     render() {
         return (
-           <div>
-                <Row className='container'>
-                    <Header menuType='second' />
-                </Row>
-                <Row className='container'>
-                    {this.props.children}
-                </Row>
-           </div>
+            <div className='container'>
+                <Col className='main'>
+                    <Row className='simple-page'>
+                        <Header menuType='second' />
+                    </Row>
+                    <Row className='content'>
+                        {this.props.children}
+                    </Row>
+                </Col>
+            </div>
         )
     }
 }
 
-export default LayOut
+export default Detail

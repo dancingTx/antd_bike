@@ -13,6 +13,7 @@ import BasicTable from '../pages/Table/BasicTable'
 import SeniorTable from '../pages/Table/SeniorTable'
 import City from '../pages/City'
 import Order from '../pages/Order'
+import orderDetail from '../pages/Order/orderDetail'
 const menuList = [
     {
         title: '首页',
@@ -124,9 +125,10 @@ const menuList = [
         component: Order,
     },
     {
-      title:'订单详情',
-      path:'/detail/order/:order_id',
-      hidden:true
+        title: '订单详情',
+        path: '/detail/order/:order_id',
+        hidden: true,
+        component: orderDetail
     },
     {
         title: '员工管理',

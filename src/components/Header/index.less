@@ -5,8 +5,21 @@
         height: 60px;
         line-height: 60px;
         padding: 0 20px;
+        .logo {
+            line-height: 60px;
+            img {
+                height: 40px;
+                vertical-align: middle;
+            }
+            span {
+                margin-left: 20px;
+                color: #fff;
+                font-size: @font18;
+            }
+        }
         a {
             padding-left: 20px;
+            color: #f00;
         }
     }
     .header_bottom {
@@ -39,6 +52,15 @@
                 width: 200px;
                 margin-left:20px;
             }
+        }
+    }
+}
+
+.simple-page{
+    .header {
+        .header_top{
+            background:#1890ff;
+            color:@colorM;
         }
     }
 }
